@@ -1,0 +1,82 @@
+audit_db
+
+    blogs
+
+        columns:
+
+            id (PK, AUTO INC, BIGINT) 
+            key (FK TO USERS, BIGINT)
+            title (VARCHAR)
+            slug (VARCHAR)
+            status (BOOLEAN)
+            created_at (DATETIME)
+            updated_at (DATETIME)
+            
+
+    blog_attributes
+
+        columns:
+
+            id (PK, AUTO INC, BIGINT) 
+            key (FK TO BLOGS, BIGINT)
+            value (VARCHAR)
+            meta_title (VARCHAR)
+            created_at (DATETIME)
+            updated_at (DATETIME)
+            
+
+    blog_categories
+
+        columns:
+
+            id (PK, AUTO INC, BIGINT)
+            key (FK TO BLOGS) (BIGINT)
+            title (VARCHAR)
+            meta_title (VARCHAR)
+            slug (VARCHAR)
+            value (TEXT)
+            created_at (DATETIME)
+            updated_at (DATETIME)
+    
+
+    blog_in_categories
+
+        columns:
+
+            id (PK, AUTO INC, BIGINT) 
+            key (FK TO BLOGS) (BIGINT)
+            value (TEXT)
+            created_at (DATETIME)
+            updated_at (DATETIME)
+
+    blog_comments
+
+        columns:
+
+            id (PK, AUTO INC, BIGINT) 
+            key (FK TO BLOGS) 
+            title (VARCHAR)
+            value (TEXT) 
+            Created_at (DATETIME)
+            updated_at (DATETIME)
+
+    blog_likes
+
+        columns:
+
+            id (PK, AUTO INC, BIGINT)
+            key (FK TO BLOGS)
+            likes (INT)
+            created_at (DATETIME)
+            updated_at (DATETIME)
+           
+
+
+blogs 
+blog_attributes 
+blog_categories 
+blog_tags 
+blog_in_tags 
+blog_in_categories 
+blog_comments 
+blog_likes

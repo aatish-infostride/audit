@@ -1,0 +1,45 @@
+{% extends '_templates/layouts/web/auth.html'%}
+
+{% block layout%}
+    <h2>_templates/pages/web/auth/signup.html</h2>
+
+    <H1>MY SITE</H1>
+
+    <h1>signup page</h1>
+    <ul><a href="{% url 'login' %}">login</a></ul>
+
+    <div>
+        <form action="" method="POST">
+
+            <label for="first_name">first name :</label>
+            <p><input type="text" id="first_name" name="first_name"></p>
+
+            <label for="last_name">last name :</label>
+            <p><input type="text" id="last_name" name="last_name"></p>
+
+            <label for="username">username :</label>
+            <p><input type="text" id="username" name="username"></p>
+
+            <label for="email">email :</label>
+            <p><input type="email" id="email" name="email"></p>
+            
+            <label for="password">password :</label>
+            <p><input type="password" id="password" name="password"></p>
+            
+            <label for="confirm_password">confirm password :</label>
+            <p><input type="password" id="confirm_password" name="confirm_password"></p>
+            
+            <p><button type="submit" value="submit"><a href="{% url 'home'%}">signup</a></button></p>
+        </form>
+    </div>
+    
+{% endblock layout%}
+
+<!-- this is form -->
+{% block authform%}
+{% endblock authform%}
+<!-- this is form -->
+<!--begin: custom javascript(used by this page)-->
+{% block page_scripts %}
+{% endblock page_scripts %}
+<!--begin: custom javascript(used by this page-->

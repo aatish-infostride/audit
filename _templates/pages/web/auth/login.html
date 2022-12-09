@@ -1,0 +1,39 @@
+{% extends '_templates/layouts/web/auth.html'%}
+
+{% block layout%}
+    <h2>_templates/pages/web/auth/login.html</h2>
+    <h1>login page</h1>
+    
+    <ul><a href="{% url 'signup' %}">signup</a></ul>
+
+    <div>
+        <form action="" method="POST">
+
+            <label for="username">username :</label>
+            <p><input type="text" id="username" name="username"></p>
+
+            <label for="password">password :</label>
+            <p><input type="password" id="password" name="password"></p>
+        
+            <p><input type="checkbox" id="password" name="password">remember</p>
+        
+            <p><a href="{% url 'forgot-password' %}">forgot password</a></p>
+            
+            <p><button type="submit" value="submit"><a href="{% url 'home' %}">login</a></button></p>
+
+        </form>
+    </div>
+  
+{% endblock layout%}
+
+
+<!-- this is form -->
+{% block authform%}
+{% endblock authform%}
+
+<!-- this is form -->
+
+<!--begin: custom javascript(used by this page)-->
+{% block page_scripts %}
+{% endblock page_scripts %}
+<!--begin: custom javascript(used by this page-->
